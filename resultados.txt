@@ -1,6 +1,0 @@
-Pruebas Flask
-{"mensaje":"Acceso autorizado!"}
-{"mensaje":"Autenticaci\u00f3n fallida"}
-{"mensaje":"Clave API inv\u00e1lida"}
-{"mensaje":"Acceso autorizado para admin desde IP 127.0.0.1!"}Pruebas FastAPI
-{"mensaje":"Acceso autorizado para admin desde IP 127.0.0.1!"}{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0ODQ0Nzg2M30.GomraOjyvgRwIQW3RDk3yCB8w_jVCxjRx9IVMSB1qkg"}{"detail":[{"type":"missing","loc":["query","x"],"msg":"Field required","input":null}]}
