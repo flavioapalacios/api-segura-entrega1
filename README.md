@@ -1,4 +1,4 @@
-API Segura - Entrega nº2
+API Segura - Entrega nº2!!!
 Este repositorio contiene la implementación de APIs seguras para la Entrega 2 del Trabajo Práctico Final de Desarrollo de Software Seguro, Tecnicatura Universitaria en Ciberseguridad. Las APIs están desarrolladas en Flask y FastAPI, incluyendo autenticación básica, por API Key, por IP y JWT (solo en FastAPI). Este documento detalla cómo actualizar el repositorio en GitHub y ejecutar las APIs en Debian.
 
 Requisitos
@@ -19,24 +19,25 @@ README.md
 Instrucciones para Actualizar en GitHub y Ejecutar en Debian
 1. Configurar el Entorno en Debian
 
-Actualiza paquetes e instala dependencias:sudo apt update
+Actualizar paquetes e instalar dependencias:
+sudo apt update
 sudo apt install python3 python3-pip git
 pip install flask fastapi uvicorn python-jwt
 
 
-Configura Git (si no está configurado):git config --global user.name "Flavio Palacios"
+Configurar Git (si no está configurado):git config --global user.name "Usuario"
 git config --global user.email "tu.email@example.com"
 
 
 
 2. Clonar o Navegar al Repositorio
 
-Clona el repositorio si no lo tienes:cd /home/fap
-git clone https://github.com/flavioapalacios/api-segura-entregal
+Clona el repositorio si no lo tienes:cd /home/usuario
+git clone https://github.com/usuario/api-segura-entregal
 cd api-segura-entregal
 
 
-Si ya lo tienes (por ejemplo, en /home/fap/fastapi-api/api-segura-entregal):cd /home/fap/fastapi-api/api-segura-entregal
+Si ya lo tienes (por ejemplo, en /home/usuario/fastapi-api/api-segura-entregal):cd /home/usuario/fastapi-api/api-segura-entregal
 
 
 
@@ -52,7 +53,7 @@ api_fastapi.py: Copia el código de la sección 3.4 del informe.nano api_fastapi
 openapi_flask.yaml: Copia el código de la sección 3.6 del informe.nano openapi_flask.yaml
 
 
-Guarda cada archivo (Ctrl+O, Enter, Ctrl+X en nano).
+Guardar cada archivo (Ctrl+O, Enter, Ctrl+X en nano).
 
 
 
@@ -68,7 +69,7 @@ Crea un commit:git commit -m "Actualización para Entrega 2: autenticación por 
 
 Empuja los cambios:git push origin main
 Si usas una rama distinta, reemplaza main por el nombre (por ejemplo, git push origin entrega2).
-Verifica en https://github.com/flavioapalacios/api-segura-entregal que los archivos se actualizaron.
+Verifica en https://github.com/usuario/api-segura-entregal que los archivos se actualizaron.
 
 
 6. Ejecutar las APIs
