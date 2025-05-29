@@ -7,7 +7,7 @@ Git (sudo apt install git)
 Dependencias:
 Flask: pip install flask
 FastAPI: pip install fastapi uvicorn python-jwt
-Cuenta de GitHub con acceso al repositorio https://github.com/flavioapalacios/api-segura-entregal
+Cuenta de GitHub con acceso al repositorio https://github.com/usuario/api-segura-entregal
 
 Estructura del Proyecto
 
