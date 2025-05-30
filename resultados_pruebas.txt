@@ -15,5 +15,5 @@
 🟣 TESTING FASTAPI (http://localhost:8001)
 
 3️⃣ Prueba JWT:
-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc0ODQ4MjYwMH0.qkGWSElJT_EwOdgdunrM831z5T6hd9h7hYw-oLOpknA
+Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 {"detail":[{"type":"missing","loc":["query","x"],"msg":"Field required","input":null}]}
