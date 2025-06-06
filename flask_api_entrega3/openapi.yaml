@@ -1,0 +1,111 @@
+openapi: 3.0.3
+info:
+  title: API Segura Flask
+  description: API con múltiples métodos de autenticación
+  version: 1.0.0
+servers:
+  - url: https://localhost:5000
+    description: Servidor de desarrollo
+
+paths:
+  /login-oauth:
+    post:
+      summary: Autenticación OAuth2
+      tags: [Autenticación]
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  example: admin
+                password:
+                  type: string
+                  example: secret
+      responses:
+        '200':
+          description: Token generado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        '401':
+          description: Credenciales inválidas
+
+  /api/segura-total:
+    get:
+      summary: Endpoint protegido completo
+      tags: [Protegidos]
+      security:
+        - bearerAuth: []
+        - apiKeyAuth: []
+        - basicAuth: []
+      responses:
+        '200':
+          description: Acceso concedido
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mensaje:
+                    type: string
+                    example: Acceso exitoso
+                  usuario:
+                    type: string
+                    example: admin
+        '401':
+          description: No autorizado
+
+  /api/usuario:
+    post:
+      summary: Crear nuevo usuario
+      tags: [Usuarios]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                  minLength: 3
+                  example: Juan Pérez
+                email:
+                  type: string
+                  format: email
+                  example: usuario@ejemplo.com
+                edad:
+                  type: integer
+                  minimum: 0
+                  maximum: 120
+                  required: false
+                  example: 30
+      responses:
+        '201':
+          description: Usuario creado
+        '400':
+          description: Validación fallida
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    apiKeyAuth:
+      type: apiKey
+      name: X-API-Key
+      in: header
+    basicAuth:
+      type: http
+      scheme: basic
